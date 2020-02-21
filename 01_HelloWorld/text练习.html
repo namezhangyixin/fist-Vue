@@ -7,38 +7,32 @@
     <title>Document</title>
 </head>
 <body>
-
-
-    <div id="text">
-        <input type="text" v-model="msg">
-        <p>Hello {{msg}}</p>
-    </div>
+   <div id="text">
+     <input type="text" v-model="msg">
+     <p>Hello {{msg}}</p>
+   </div>
+   <p id="text2">{{msg}}</p>
     
-    <p id="text2">{{msg}}</p>
-
-    <script src="../js/vue.js"></script>
-    
-    <script>
-    const vm = new Vue({
-        el: '#text',
-        data:{
-            msg:'Beijin atguigu'
-        }
-    })
-
-    setTimeout(()=>{
-     vm.msg = 'nidaye' 
-    },1000);
-
-     new Vue ({
-         el:'#text2',
+   
+   <script src="../js/vue.js"></script>
+   <script>
+     const vm = new Vue({
+         el:'#text',
          data:{
-             msg:'tom'
+             msg:'Beijin atguigu'
          }
      })
-    </script>
 
-</script>
- </script>
+     setTimeout(()=>{
+       vm.msg = 'adhakjghs'
+     },1000);
+
+     new Vue({
+         data:{
+             msg:'NMB'
+         }
+     }).$mount('#text2')
+   
+   </script>
 </body>
 </html>
